@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Connect Assessment | Victory Church</title>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assessment_content.js"></script>
+	<script type="text/javascript" src="assessment.js"></script>
+	<link rel="stylesheet" href="assessment_stylesheet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic%7CMontserrat:regular,700%7COpen+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic%7CPlay:regular,700&amp;display=swap" media="all">
+	<script src="https://kit.fontawesome.com/da43f88009.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<header><img id="victory_logo" src="logo.png" alt="Victory Logo"></header>
+
+	<main class="flex">
+
+	<div id="landing_container" class="flex">	
+		<h1>Welcome</h1>
+		<fieldset class="flex no-border">
+			<legend class="centered">Which assessment would you like to take?</legend>
+
+			<button class="sp-button outline" onclick="loadAssessment('A');">Personality</button>
+			<button class="sp-button outline" onclick="loadAssessment('B');">Spiritual Gifts</button>
+		
+		</fieldset>
+	</div>
+
+
+	<div id="assessment_container">
+
+		<h1 id="title"></h1>
+
+		<p id="instructions">Instructions</p>
+
+		<form id="assessment_form" action="results.html" onsubmit="return validateForm(event)">
+		<div id="assessment">
+
+
+			<!--
+			<div>
+				<input type="radio" name="D_q1">
+				<label>Never</label>
+
+				<input type="radio" name="D_q1">
+				<label>Rarely</label>
+
+				<input type="radio" name="D_q1">
+				<label>Sometimes</label>
+
+				<input type="radio" name="D_q1">
+				<label>Often</label>
+
+				<input type="radio" name="D_q1">
+				<label>Always</label>
+			</div>	
+			-->
+
+
+
+			<!--
+			<input type="radio" name="question_1">
+			<label></label>
+			-->
+
+			<!--
+			<label for="gifts_q1">Question 1</label>
+			<select id="gifts_q1">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			-->
+
+		</div>
+
+		<button class="sp-button outline" type="submit">Submit</button>
+		</form>
+	</div>
+	</main>
+
+</body>
+</html>
+
+<!-- 
+1. Main screen - which assessment to take?
+2. Select assessment and take you to assessment
+3. Results
+4. Return to assessment page
+
+-->

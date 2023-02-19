@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Connect Assessment Results | Victory Church</title>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="assessment_stylesheet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic%7CMontserrat:regular,700%7COpen+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic%7CPlay:regular,700&amp;display=swap" media="all">
+	<script type="text/javascript" src="assessment_content.js"></script>
+	<script type="text/javascript" src="assessment_response.js"></script>
+	<script src="https://kit.fontawesome.com/da43f88009.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script>
+  $( function() {
+    $( "#all_results" ).accordion({
+    	active: false,
+    	heightStyle: "content",
+      	collapsible: true
+    });
+
+    $( "#all_results h2" ).button().on( "click", function() {
+      if ( $( "#all_results h2 i" ).hasClass("fa-chevron-up")) {
+        	$( "#all_results h2" ).html("<i class='fa-solid fa-chevron-down' aria-hidden='true'></i>Show all");
+      } else {
+        	$( "#all_results h2" ).html("<i class='fa-solid fa-chevron-up' aria-hidden='true'></i>Hide all");
+      }
+    });
+
+  } );
+
+  </script>
+
+
+</head>
+<body>
+
+	<header><img id="victory_logo" src="logo.png" alt="Victory Logo"></header>
+
+	<main>
+		<h1>Here are your top results!</h1>
+
+		<div id="top_results"></div>
+		<hr/>
+		<!--convert to collapsible-->
+		<div id="all_results"><h2><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>Show all</h2>
+		  <div>
+		    <div id="results_container">
+		    	<table>
+		    		<!--
+		    		<tr>
+		    			<th>Letter</th>
+		    			<th>Definition</th>
+		    			<th>Your Score</th>
+		    		</tr>
+		    		<tr>
+		    			<td>A</td>
+		    			<td>
+		    				<h3>Title</h3>
+		    				<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p></td>
+		    			<td>Your Score</td>
+		    		</tr>-->
+		    	</table>
+		    </div>
+		  </div>
+
+		</div>
+		<fieldset id="share_results">
+			<legend>Note: Your results will be shared with Victory Church.</legend>
+			<label for="user_name">Your name:</label>
+			<input id="user_name" autocomplete="name" type="text"/>
+			<label for="email">Your email address:</label>
+			<input id="email" autocomplete="name" type="email"/>
+
+			<button class="sp-button outline" onclick="emailResults();">Email Results</button></div>
+		</fieldset>
+	</main>
+
+	
+
+</body>
+</html>
